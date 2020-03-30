@@ -1,4 +1,4 @@
-dept,nom_dept,date,nb_deces_cumul,nb_pers_hospitalisees,nb_pers_rea_soins-int
+dept,nom_dept,date,nb_deces_cumul,nb_pers_hospitalisees,nb_pers_rea_soins_int
 01,Ain,2020-03-18,0,2,0
 01,Ain,2020-03-19,0,2,0
 01,Ain,2020-03-20,0,2,0
