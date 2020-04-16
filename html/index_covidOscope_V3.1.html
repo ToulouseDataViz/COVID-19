@@ -39,7 +39,7 @@
 									</div>
 									<div class="modal-body"  >
 										<p  style="color: #000; font-size: 12px; text-align : left">
-											&bull; Utilisez les sélecteurs pour choisir l'indicateur, le sexe et l'echelle des graphiques. <br>
+											&bull; Utilisez les sélecteurs pour choisir l'indicateur, le sexe, les unités et l'echelle des graphiques. <br>
 											&bull; Utilisez le sélecteur de date pour visualiser les données à une date antérieure.<br>
 											&bull; Utilisez le sélecteur de département pour obtenir les statistiques du département. <br>
 											&bull; Placez le curseur de la souris sur les barres pour visualiser l'info-bulle. <br>
@@ -71,6 +71,7 @@
 											&bull; Nombre de personnes actuellement hospitalisées pour le COVID-19.<br>
 											&bull; Nombre de personnes actuellement en réanimation ou soins intensifs pour le COVID-19.<br>
 											&bull; Nombre cumulé de personnes retournées à domicile.<br><br>
+											&bull; Ces chiffres s'affichent aussi ‱ de la population.<br><br>
 											voir : <a href="https://github.com/ToulouseDataViz/COVID-19" target="_blank">https://github.com/ToulouseDataViz/COVID-19</a><br><br>
 											Source des données <a href="https://www.data.gouv.fr/fr/datasets/donnees-hospitalieres-relatives-a-lepidemie-de-covid-19/#_" target="_blank"> Santé publique France </a>Santé publique France <br><br>	
 											Réalisation A Ottenheimer - <a href="http://datasens.fr" target="_blank"> datasens.fr </a> avec le support d'Alain Roan - <a href="https://perceptible.fr"> perceptible.fr </a> avril 2020<br><br>
@@ -124,6 +125,9 @@
 		<div class="col-md-9"  id =chart> </div>
 		<p>&nbsp;</p>
 		<div class="col-md-3" >
+			<!-- Affichage Nb ‱ de la population -->	
+			<div class="col-md-12" style=" color: #000; background-color: #e6d7a8;" id =affichage> </div>
+			<p>&nbsp;</p>
 			<!-- Chiffre France -->	
 			<div class="col-md-12" style="  background-color: #e6d7a8;" id =titre_france> </div>
 			<p>&nbsp;</p>
@@ -162,7 +166,7 @@ $('#exampleModal').on('show.bs.modal', function (event) {
 
 // Chargement des celulles observablehq
 import {Inspector, Runtime} from "https://unpkg.com/@observablehq/notebook-runtime?module";
-import notebook from "https://api.observablehq.com/d/18c00a071ca95fc2.js";
+import notebook from "https://api.observablehq.com/d/ba164103d9fdd402.js";
 
 
 const notebookCellsToRender = {
@@ -176,6 +180,7 @@ const notebookCellsToRender = {
  "viewof select_jour" : "#date",
  "viewof select_dep" : "#dep",
  "viewof genre" : "#genre",
+ "viewof select_affichage" : "#affichage",
  "legend": "#legend",
  "text_france": "#titre_france",
  "text_dep": "#titre_dep",
